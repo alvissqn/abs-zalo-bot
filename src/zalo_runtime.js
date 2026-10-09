@@ -384,6 +384,16 @@ export class AccountRuntime extends EventEmitter {
     return this.api.addReaction(icon, dest);
   }
 
+  async sendSticker(stickerRef, threadId, threadType = 0) {
+    if (!this.api?.sendSticker) throw new Error("not_connected");
+    const payload = {
+      id: Number(stickerRef?.id || stickerRef?.sticker_id),
+      cateId: Number(stickerRef?.cateId || stickerRef?.category_id || stickerRef?.catId || 0),
+      type: Number(stickerRef?.type || stickerRef?.sticker_type || 0)
+    };
+    return this.api.sendSticker(payload, String(threadId), Number(threadType));
+  }
+
   async undoMessage(dest, threadId, threadType = 0) {
     if (!this.api?.undo) throw new Error("not_connected");
     return this.api.undo(dest, String(threadId), threadType);
