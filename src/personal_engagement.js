@@ -2,7 +2,7 @@
 // It decides intent only; an account adapter remains responsible for API calls.
 
 const CRITICAL = /(?:tự\s*(?:tử|hại|vẫn)|không\s+muốn\s+(?:sống|tồn\s*tại)|muốn\s+chết|giết\s+(?:người|ai|tôi|em)|bạo\s*hành|xâm\s*hại|cấp\s*cứu|nguy\s+hiểm\s+(?:ngay|tức\s*thì)|suicide|self[- ]?harm|kill\s+(?:myself|someone)|rape|domestic\s+violence)/iu;
-const SENSITIVE = /(?:buồn|khóc|mất\s+(?:mát|người)|qua\s+đời|(?:đau\s+(?:đớn|khổ|lòng|đầu|tim)|bị\s+đau)|bệnh|y\s*tế|bác\s*sĩ|thuốc|lo\s+quá|sợ|thất\s+vọng|bực|giận|khiếu\s*nại|lỗi|khẩn\s*cấp|\bgấp\b|pháp\s*lý|luật\s*sư|tòa\s*án|thanh\s*toán|chuyển\s*khoản|ngân\s*hàng|mật\s*khẩu|\botp\b|bị\s*hack|chiếm\s+tài\s*khoản|lừa\s*đảo|trẻ\s*(?:em|vị\s*thành\s*niên)|em\s*bé|mang\s*thai|abuse|fraud|scam)/iu;
+const SENSITIVE = /(?:buồn|khóc|mất\s+(?:mát|người)|qua\s+đời|(?:đau\s+(?:đớn|khổ|lòng|đầu|tim)|bị\s+đau)|bệnh|y\s*tế|bác\s*sĩ|thuốc|lo\s+quá|sợ|thất\s+vọng|bực|giận|khiếu\s*nại|lỗi|khẩn\s*cấp|\bgấp\b|pháp\s*lý|luật\s*sư|tòa\s*án|(?:lừa\s*đảo|gian\s*lận)\s*(?:thanh\s*toán|chuyển\s*khoản)|mật\s*khẩu|\botp\b|bị\s*hack|chiếm\s+tài\s*khoản|lừa\s*đảo|trẻ\s*(?:em|vị\s*thành\s*niên)|em\s*bé|mang\s*thai|abuse|fraud|scam)/iu;
 
 export const ZALO_REACTION_CODES = Object.freeze({
   heart: "/-heart",
