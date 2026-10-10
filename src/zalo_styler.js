@@ -283,7 +283,7 @@ function parseInlineMarkdown(source, baseOffset) {
       } else {
         const closeTag = new RegExp(`\\[\\/(?:${color[2]})\\]`, "iu");
         if (closeTag.test(source.slice(index + color[0].length))) {
-          open(key, [ZALO_STYLES.Bold, style]);
+          open(key, [style]);
         } else {
           append(color[0]);
         }
@@ -367,11 +367,9 @@ export function parseMarkdownStyles(input) {
       const heading = source.match(/^(#{1,3})\s+(.+)$/u);
       if (heading) {
         source = heading[2];
-        headingStyles = heading[1].length === 1
-          ? [ZALO_STYLES.Bold, ZALO_STYLES.HeaderLarge, ZALO_STYLES.RubyRed]
-          : heading[1].length === 2
-            ? [ZALO_STYLES.Bold, ZALO_STYLES.EmeraldGreen]
-            : [ZALO_STYLES.Bold, ZALO_STYLES.AmberOrange];
+        headingStyles = heading[1].length === 1 || heading[1].length === 2
+          ? [ZALO_STYLES.Bold, ZALO_STYLES.HeaderLarge]
+          : [ZALO_STYLES.Bold];
       } else {
         source = source.replace(/^(\s*)[-+*]\s+/u, "$1• ");
       }
@@ -389,7 +387,15 @@ export function parseMarkdownStyles(input) {
       styles.push({
         start: lineStart + parsed.text.indexOf(numbered[1]),
         len: numbered[1].length,
-        st: ZALO_STYLES.EmeraldGreen,
+        st: ZALO_STYLES.Bold,
+      });
+    }
+    const bulletLabel = parsed.text.match(/^(\s*•\s*)([^:\n]{2,35}:)/u);
+    if (bulletLabel) {
+      styles.push({
+        start: lineStart + bulletLabel[1].length,
+        len: bulletLabel[2].length,
+        st: ZALO_STYLES.Bold,
       });
     }
     if (index < lines.length - 1) {

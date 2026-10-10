@@ -18,13 +18,21 @@ In đậm:
 
 Giống thể thức công văn hành chính Việt Nam — người đọc quen mắt, không cần giải thích thêm.
 
-## Màu chữ: dùng đỏ để nhấn mạnh, còn lại tuỳ ngữ cảnh
+## Màu chữ: đỏ, xanh, cam — đúng chỗ, đúng ngữ cảnh
 
-Dùng **màu đỏ cho chỗ cần nhấn mạnh**. Cú pháp: `[red]…[/red]`.
+Tin có nội dung thông tin (hướng dẫn, báo cáo, giải đáp, tổng hợp, cập nhật, so sánh...) phải có từ 2 đến 5 chỗ tô màu ở những điểm người đọc cần bắt ngay: ngày giờ/hạn chót, số tiền/con số chính, trạng thái (đã xong/còn thiếu), điều kiện bắt buộc, lưu ý dễ sót, điểm mới nổi bật. Chỉ tin chào hỏi, cảm ơn, trả lời một câu ngắn là không cần màu.
 
-Mã còn hỗ trợ `[red]`/`[do]`, `[green]`/`[xanh]`, `[orange]`/`[cam]`, `[yellow]`/`[vang]` (cú pháp tiếng Anh / bí danh Việt không dấu) nhưng **không có quy ước dùng cố định** — tuỳ ngữ cảnh mà chọn, đừng lạm dụng. Màu dùng nhiều thì mất tác dụng nhấn mạnh, tin nhắn nhìn rối thay vì rõ.
+Tô màu cho cụm từ ngắn thật sự quan trọng, để người đọc lướt là bắt được ý:
+- Đỏ `[red]…[/red]` / `[do]…[/do]`: cảnh báo, sai/cấm, lỗi, hạn chót, việc bắt buộc, số liệu xấu, rủi ro.
+- Xanh `[green]…[/green]` / `[xanh]…[/xanh]`: đúng/đạt, đã xong, được duyệt, kết quả tốt, đáp án đúng, giải pháp cốt lõi.
+- Cam `[orange]…[/orange]` / `[cam]…[/cam]`: lưu ý, đang chờ, cần kiểm tra lại, mẹo, thông tin còn trống — quan trọng nhưng chưa tới mức cảnh báo.
 
-Lưu ý chính tả: viết đúng `[red]`/`[xanh]`/`[cam]`/`[vang]` như trên. Gõ có dấu (`[đỏ]`, `[vàng]`) sẽ không được nhận diện — bộ dịch không khớp được, thẻ ngoặc vuông sẽ lọt nguyên văn ra tin nhắn thay vì đổi màu.
+Quy tắc:
+- Chỉ tô vài chữ (2–5 từ), không tô cả câu hay cả đoạn. Tối đa khoảng 5 chỗ mỗi tin — nhiều hơn thì mất tác dụng, tin nhìn rối.
+- Chỗ nào đã tô màu thì bỏ in đậm ở chính cụm đó — màu một mình đã đủ nổi, chồng hai định dạng tốn gấp đôi dung lượng tin. In đậm để dành cho nhãn mục và tiêu đề.
+- Thẻ màu dùng được ở mọi chỗ, kể cả trong câu in nghiêng hay trong danh sách.
+- Vàng `[vang]` khó đọc trên nền sáng — hạn chế dùng.
+Lưu ý chính tả: viết đúng `[red]`/`[do]`, `[green]`/`[xanh]`, `[orange]`/`[cam]`, `[yellow]`/`[vang]` (không dấu).
 
 ## Sticker: nhóm vui thì dùng, đang làm việc thì đừng
 
